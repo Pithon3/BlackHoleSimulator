@@ -25,6 +25,7 @@ public class Object {
 	}
 	
 	public void gravity(double mass2, double x2, double y2) {
+              double dis = Math.sqrt(Math.pow(x - x2, 2) + Math.pow(y - y2, 2))
 		double disx = (x - x2);
 		double disy = (y - y2);
 		
@@ -36,20 +37,12 @@ public class Object {
 			signy = -1;
 		}
 		
-		double fx = signx * G * (Math.pow(10, G10)) * ((mass * mass2) / (Math.pow(disx, 2)));
-		double fy = signy * G * (Math.pow(10, G10)) * ((mass * mass2) / (Math.pow(disy, 2)));
- 		double ax = fx / mass;
- 		double ay = fy / mass;
+		double mdis = (G * Math.pow(10, G10) * mass) / (Math.pow(dis, 2)
  		
- 		
- 		
- 		xd += ax;
- 		yd += ay;
-		
 		double angle = Math.atan(disy/disx);
 		
-		//double xc = Math.cos(angle) * a;
-		//double yc = Math.sin(angle) * a;		
+		double xc = Math.cos(angle) * mdis;
+		double yc = Math.sin(angle) * mdis;		
 		
 		
 	}
