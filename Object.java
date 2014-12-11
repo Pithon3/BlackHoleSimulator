@@ -25,7 +25,7 @@ public class Object {
 	}
 	
 	public void gravity(double mass2, double x2, double y2) {
-            double dis = Math.sqrt(Math.pow(x - x2, 2) + Math.pow(y - y2, 2))
+           double dis = Math.sqrt(Math.pow(x - x2, 2) + Math.pow(y - y2, 2))
 		double disx = (x - x2);
 		double disy = (y - y2);
 		
