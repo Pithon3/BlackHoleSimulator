@@ -35,7 +35,7 @@ public class Star extends Object{
 	}
 	
 	public void update(Object obj) {
-		gravity(obj.mass, obj.x, obj.y);
+		gravity(obj.x, obj.y);
 		y += yd;
 		x += xd - (y - 320)/1000;
 		
